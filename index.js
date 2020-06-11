@@ -113,12 +113,16 @@ var arraySum = function() {
     sum += this[i];
   }
 
+
   console.log('Hey There !! From My Sum Method');
   console.log(sum);
 }
 
-arraySum.call([2,4,8]);
-
+// arraySum.call([2,4,8]);
+var arr = [2,4,8];
+arraySum.bind(arr)();
+// arr.arraySum()
+// [2,4,8].call(arraySum());
 
 const appDiv = document.getElementById('app');
 appDiv.innerHTML = `<h1>JS Starter</h1>`;
