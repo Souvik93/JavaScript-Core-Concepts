@@ -45,9 +45,10 @@ bindWelcome.bind(bindObject)('New Towm','Kolkata','Bengal');
 
 // this Concept Practice
 
-var myMethod = function() {
-  console.log("Hey There !! From myMethod");
+var myMethod = function(city) {
+  console.log("Hey There  !! From myMethod");
   console.log(this); // Should Print undefined if is in strict mode else it will print Window Object.
+  console.log("Hey World !! I am from "+city);
 }
 
 var myObejects = {
@@ -61,9 +62,21 @@ myObejects.myMethod(); // Now it will refer to local scope
 
 // It will print {name: "Souvik Das", myMethod: ƒ};
 
+// myMethod.bind(myObejects)() // Hard Binding.
+
+// myMethod.call(myObejects); // Explicit Binding 
+
+// myMethod.apply(myObejects,['India']);
+
+/// myMethod.call(myObejects,'India');
+
+myMethod.bind(myObejects)('India');
 
 // References https://www.codementor.io/@dariogarciamoya/understanding--this--in-javascript-du1084lyn?icn=post-8i1jca6jp&ici=post-du1084lyn
 
+/*
+https://www.codementor.io/@niladrisekhardutta/how-to-call-apply-and-bind-in-javascript-8i1jca6jp
+*/
 
 
 
