@@ -104,5 +104,21 @@ var baz = new bar( 3 );
 console.log( obj1.a ); // 2 Since Hard Binding
 console.log( baz.a ); // 3 Since New Binding
 
+
+//  Array Sum
+
+var arraySum = function() {
+  var sum = 0;
+  for(var i=0;i<this.length;i++) {
+    sum += this[i];
+  }
+
+  console.log('Hey There !! From My Sum Method');
+  console.log(sum);
+}
+
+arraySum.call([2,4,8]);
+
+
 const appDiv = document.getElementById('app');
 appDiv.innerHTML = `<h1>JS Starter</h1>`;
